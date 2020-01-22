@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Space Tic-Tac-Toe</title>
+</head>
+<body>
+
+    <div class="pos-header" id="sceneTwo">
+        <header class="header" data-depth="0.2">
+            <a href="./" class="title-link">
+                <h1 class="title">Let's play!!</h1>
+            </a>
+        </header>
+    </div>
+    
+    <div class="menu">
+        <nav class="nav">
+            <ul class="ul">
+                <li class="li">
+                    <h2 class="hmb-h2">Developed by Nicolas Escandarani</h2>
+                </li>
+                <li class="li">
+                    <a href="https://www.nescanda.com/" class="a" target="blank_">About Me</a>
+                </li>
+                <li class="li">
+                    <a href="https://www.nescanda.com/contact" class="a" target="blank_">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        
+    <div class="overlay"></div>
+    
+    <div class="hmb-lines">
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line three"></div>
+    </div>
+            
+    <div class="pos-ast">
+        <div class="ast-wrap" id="sceneAst">
+            <img src="./assets/astronaut4.png" alt="Astronaut" class="ast" data-depth="5">
+        </div>
+    </div>
+            
+    <div class="pos-ast-two">
+        <div class="ast-two-wrap" id="sceneAstTwo">
+            <img src="./assets/astronaut5.png" alt="Astronaut" class="ast-two" data-depth="2">
+        
+            <div class="bubble-wrap" data-depth="2">
+                <div class="bubble" id="bubble">
+                    <p class="turn-b" id="turnB">Play!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="pos-ship">
+        <div class="ship-wrap" id="sceneShip">
+            <img src="./assets/ship.png" alt="Astronaut" class="ship" data-depth="4">
+        </div>
+    </div>
+            
+    <div class="pos-helmet">
+        <div class="helmet-wrap" id="sceneHelmet">
+            <img src="./assets/helmet.png" alt="Astronaut" class="helmet" data-depth="3">
+        </div>
+    </div>
+    
+    <div class="container-wrap">
+
+        <div class="game">    
+
+            <div class="turn-wrap">
+                <p class="turn" id="turn">Play!</p>
+            </div>
+
+            <div class="container" id="main">
+
+                <!-- show X or O on div click -->
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+                <div class="box" id="box4"></div>
+                <div class="box" id="box5"></div>
+                <div class="box" id="box6"></div>
+                <div class="box" id="box7"></div>
+                <div class="box" id="box8"></div>
+                <div class="box" id="box9"></div>
+            </div>
+            <!-- Play Again And Reset All Info -->
+            <!-- <button onclick="replay()">Play Again</button> -->
+        </div>
+
+            <div class="btn">
+                <input onclick="replay()" type="button" class="button" value="Play Again">
+            </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="hmb.js"></script>
+
+
+    <script src="parallax.min.js"></script>
+
+    <script>
+        var scene = document.getElementById('sceneTwo');
+        var parallax = new Parallax(sceneTwo);
+        var scene = document.getElementById('sceneAst');
+        var parallax = new Parallax(sceneAst);
+        var scene = document.getElementById('sceneAstTwo');
+        var parallax = new Parallax(sceneAstTwo);
+        var scene = document.getElementById('sceneShip');
+        var parallax = new Parallax(sceneShip);
+        var scene = document.getElementById('sceneHelmet');
+        var parallax = new Parallax(sceneHelmet);
+    </script>
+    
+</body>
+</html>
