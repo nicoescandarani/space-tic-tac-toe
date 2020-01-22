@@ -15,6 +15,11 @@ body {
     height: 100vh;
 }
 
+.main {
+    height: 100vh;
+    overflow: hidden;
+}
+
 
 .pos-header {
     z-index: 4;
@@ -326,6 +331,10 @@ body {
             
             .box {
                 font-size: 100px;
+            }
+    
+            .box:hover {
+                background: none;
             }
         }
 
