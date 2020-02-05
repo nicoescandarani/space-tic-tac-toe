@@ -1,1 +1,1 @@
-# Space - Tic - Tac - Toe
+# Space Tic - Tac - Toe
