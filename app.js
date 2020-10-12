@@ -2,17 +2,15 @@
     
 var turn = document.getElementById("turn");
 var bubble = document.getElementById("turnB");
-// boxes => all boxes
-// X_or_O => to set X or O into the box
    boxes = document.querySelectorAll("#main div"), X_or_O = 0;
    function selectWinnerBoxes(b1,b2,b3) {
     b1.classList.add("win");
     b2.classList.add("win");
     b3.classList.add("win");
     turn.innerHTML = b1.innerHTML + " wins!";
-   //  turn.style.fontSize = "40px";
+       
     bubble.innerHTML = b1.innerHTML + " wins!";
-   //  bubble.style.fontSize = "40px";
+       
 }
 function getWinner(){
     var box1 = document.getElementById("box1"),
@@ -25,7 +23,7 @@ function getWinner(){
         box8 = document.getElementById("box8"),
         box9 = document.getElementById("box9");
 
-// get all posibilites
+// ! Get all posibilites.
     if(box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML)
        selectWinnerBoxes(box1,box2,box3);
     if(box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML)
@@ -50,16 +48,15 @@ function getWinner(){
        selectWinnerBoxes(box3,box5,box7);
 
 }
-      // set event onclick
+      // ! Set onclick event.
 for  (var i = 0; i < boxes.length; i++)    {
 
     boxes[i].onclick = function()    {
 
-       // not allow to change the value of the box
+       // ! Not allow to change the value of the box.
         if  (this.innerHTML !== "X" && this.innerHTML !== "O") {
         if  (X_or_O%2 === 0)    {
-
-            // console.log(X_or_O);
+            
         this.innerHTML = "X"; 
             turn.innerHTML = "O Turn Now";
             bubble.innerHTML = "O Turn Now";
@@ -67,8 +64,7 @@ for  (var i = 0; i < boxes.length; i++)    {
             X_or_O += 1;
           
     }   else    {
-
-        // console.log(X_or_O);
+        
         this.innerHTML = "O";
         turn.innerHTML = "X Turn Now";
         bubble.innerHTML = "X Turn Now";
@@ -85,9 +81,9 @@ for  (var i = 0; i < boxes.length; i++)    {
        boxes[i].classList.remove("win");
        boxes[i].innerHTML = "";
        turn.innerHTML = "Play!";
-      //  turn.style.fontSize = "40px";
+        
        bubble.innerHTML = "Play!";
-      //  bubble.style.fontSize = "40px";
+        
        
    }
    
